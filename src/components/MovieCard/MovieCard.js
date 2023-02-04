@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import './MovieCard.scss';
 
 const MovieCard = ({movie}) => {
-    
+
 	return (
 		<div className="card-item">
 			<Link to={`/movie/${movie.imdbID}`}>

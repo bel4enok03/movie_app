@@ -1,0 +1,37 @@
+@import "../../common/colors.scss";
+
+.movie-section {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0px;
+}
+
+.movie-title {
+    font-size: 28px;
+    color: $font-primary;
+}
+
+.movie-plot {
+    font-size: 14px;
+    margin-top: 20px;
+    line-height: 1.8rem;
+    padding: 10px 0px;
+    color: $font-secondary;
+}
+
+.movie-info>div span:first-child {
+    padding: 10px 0px;
+    color: $font-primary;
+    font-weight: 600;
+    width: 150px;
+    display: inline-block;
+}
+
+.movie-info>div span {
+    font-size: 14px;
+    color: $font-success;
+}
+
+.section-right {
+    margin-left: 30px;
+}

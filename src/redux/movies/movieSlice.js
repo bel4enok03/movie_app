@@ -11,6 +11,8 @@ export const movieSlice = createSlice({
 		addMovies: (state, action) => {
 			state.movies = action.payload;
 		},
+
+
 	},
 });
 
