@@ -1,22 +1,23 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect } from 'react';
 import MovieApi from '../../common/api/MovieApi';
 import { APIKey } from '../../common/api/MovieApiKey';
 import './MovieDetail.scss';
 import { useParams } from 'react-router';
+import { useDispatch, useSelector } from 'react-redux';
+import { getSelectedMovieOrShow, selectedMovieOrShow } from '../../redux/movies/movieSlice';
 
 const MovieDetail = () => {
 	let { imdbID } = useParams();
-
-	const [movie, setMovie] = useState('');
+	const dispatch = useDispatch();
+	const movie = useSelector(getSelectedMovieOrShow);
 
 	useEffect(() => {
 		const fetchMovieOfDetail = async () => {
 			const responce = await MovieApi.get(`?apiKey=${APIKey}&i=${imdbID}&Plot=full`);
-			setMovie(responce.data);
-			console.log(responce);
+			dispatch(selectedMovieOrShow(responce.data));
 		};
 		fetchMovieOfDetail();
-	}, [imdbID]);
+	}, [dispatch, imdbID]);
 
 	return (
 		<div className="movie-section">

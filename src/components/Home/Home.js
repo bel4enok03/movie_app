@@ -6,14 +6,13 @@ import { addMovies } from '../../redux/movies/movieSlice';
 import MovieListing from '../MovieListing/MovieListing';
 
 const Home = () => {
-	const movieText = 'harry';
+	const movieText = 'dragon';
 	const dispatch = useDispatch();
 
 	useEffect(() => {
         const fetchMovies = async () => {
             const responce = await MovieApi.get(`?apiKey=${APIKey}&s=${movieText}&type=movie`);
             dispatch(addMovies(responce.data));
-
         };
 		fetchMovies();
 	}, [dispatch]);
