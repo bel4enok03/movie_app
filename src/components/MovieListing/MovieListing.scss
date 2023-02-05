@@ -2,15 +2,16 @@
 
 .movie-list{
     margin: 20px 0px;
-    h2 {
-        color: $font-secondary;
-        margin-bottom: 10px;
-        font-weight: 400;
-    }
 }
 
 .movie-container {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    grid-gap: 15px;
+    grid-gap: 16px;
+}
+
+h2 {
+    color: $font-secondary;
+    margin-bottom: 10px;
+    font-weight: 400;
 }
