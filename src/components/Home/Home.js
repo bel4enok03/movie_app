@@ -10,9 +10,6 @@ const Home = () => {
 	const text = useSelector(getInput)
 	const dispatch = useDispatch();
 
-	const movieText = 'dragon';
-	const seriesText = 'house';
-
 	useEffect(() => {
         const fetchMovies = async () => {
             const responce = await MovieApi.get(`?apiKey=${APIKey}&s=${text}&type=movie`);
@@ -31,7 +28,6 @@ const Home = () => {
 
 	return (
 		<div>
-			<div className="banner-img"></div>
 			<MovieListing />
 		</div>
 	);

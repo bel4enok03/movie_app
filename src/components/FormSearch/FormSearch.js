@@ -3,6 +3,7 @@ import { useDispatch } from 'react-redux';
 import { updateInput } from '../../redux/movies/inputSlice';
 import './FormSearch.scss';
 
+
 const Input = () => {
 	const [inputValue, setInputValue] = useState('');
 	const dispatch = useDispatch();
@@ -14,6 +15,7 @@ const Input = () => {
 
 	return (
 		<form onSubmit={handleSubmit}>
+			<button onClick={handleSubmit}></button>
 			<input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
 		</form>
 	);

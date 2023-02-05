@@ -3,7 +3,7 @@ import { createSlice } from '@reduxjs/toolkit';
 const inputSlice = createSlice({
 	name: 'input',
 	initialState: {
-		value: '',
+		value: 'game',
 	},
 	reducers: {
 		updateInput: (state, action) => {
