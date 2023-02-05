@@ -6,14 +6,18 @@
 
 .movie-container {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fill, minmax(210px, 1fr));
     grid-gap: 16px;
 }
 
-
+h2 {
+    color: $font-secondary;
+    margin-bottom: 10px;
+    font-weight: 400;
+}
 @media all and (max-width: 600px) {
-    .movie-container {
-        justify-items:center;
+    .movie-container{
+        grid-template-columns: repeat(1, 1fr);
+        justify-items: center;
     }
-
 }
