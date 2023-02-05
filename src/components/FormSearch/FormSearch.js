@@ -15,7 +15,7 @@ const Input = () => {
 
 	return (
 		<form onSubmit={handleSubmit}>
-			<button onClick={handleSubmit}></button>
+			<button></button>
 			<input type="text" value={inputValue} onChange={(e) => setInputValue(e.target.value)} />
 		</form>
 	);
