@@ -38,6 +38,30 @@
 
 .section-left img {
     width: 300px;
-    
-    
+}
+
+@media all and (max-width: 600px) {
+    .movie-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .movie-title {
+        font-size: 18px;
+    }
+    .movie-plot {
+        font-size: 12px;
+        margin-top: 10px;
+        line-height: 1.2rem;
+    }
+
+    .movie-info>div span:first-child {
+        padding: 10px 0px;
+        font-weight: 600;
+        width: 100px;
+    }
+    .movie-info>div span {
+        font-size: 12px;
+    }
+
 }
